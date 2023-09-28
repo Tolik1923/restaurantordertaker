@@ -1,0 +1,5 @@
+DB_USER = "myuser"
+DB_PASSWORD = "qwezxc"
+DB_HOST = "db"
+DB_PORT = "5432"
+DB_NAME = "restaurant"
