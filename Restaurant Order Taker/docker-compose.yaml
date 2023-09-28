@@ -23,14 +23,25 @@ services:
     volumes:
       - ./Back-end:/code/app
     ports:
-      - "80:80"
+      - "8000:8000"
     depends_on:
       - db
+    networks:
+      - deploy_network
 
   front:
     build:
       context: ./Front-end
     ports:
-      - "8501:8501"
+      - "8080:8080"
+      # - "8501:8501"
     depends_on:
       - app
+    networks:
+      - deploy_network
+
+  networks:
+    deploy_network:
+      driver: bridge
+
+    
