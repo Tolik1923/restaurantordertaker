@@ -28,11 +28,11 @@ def handle_guest_message(message: str, id_orders: int) -> str:
     if "that's all" in message:
         return for_guest.get_total(id_orders)
 
-    if "yes" in message:
+    if "yes, please" in message:
         for_guest.creating_items(id_orders, item)
         return "Would you like anything else?"
 
-    if "no" in message:
+    if "no, thank you" in message:
         return "Would you like anything else?"
 
     else:
